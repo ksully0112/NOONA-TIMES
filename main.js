@@ -19,6 +19,15 @@ const render = () => {
                 ? news.description.substring(0, 200) + "..."
                 : news.description
             : "내용없음";
+
+        const image = news.urlToImage 
+            ? news.urlToImage 
+            : "https://via.placeholder.com/150?text=Image+Not+Available";
+
+        const source = news.source.name 
+            ? news.source.name 
+            : "no source";
+
         return `<div class="row news">
             <div class="col-lg-4">
                 <img class="news-img-size" src="${image}" />
